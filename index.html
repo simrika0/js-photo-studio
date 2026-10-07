@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Photo Studio & Electronics | Dhapasi, Kathmandu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#09090b',
+                        surface: '#121217',
+                        surfaceBorder: '#272730',
+                        champagne: {
+                            400: '#E5C07B',
+                            500: '#D4AF37',
+                            600: '#B89228'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(18, 18, 23, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .glass-card-hover:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #FFF 30%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-slate-200 font-sans antialiased selection:bg-champagne-500 selection:text-obsidian min-h-screen flex flex-col">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-obsidian/90 backdrop-blur-md border-b border-surfaceBorder">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full bg-champagne-500/10 border border-champagne-500/40 flex items-center justify-center font-serif text-champagne-500 font-bold text-lg">
+                    JS
+                </div>
+                <div>
+                    <span class="block font-serif font-bold text-lg tracking-wide text-white leading-none">JS PHOTO STUDIO</span>
+                    <span class="block text-[10px] text-slate-400 tracking-widest uppercase font-medium mt-0.5">& ELECTRONICS</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="#services" class="text-slate-300 hover:text-champagne-500 transition-colors">Services</a>
+                <a href="#gallery" class="text-slate-300 hover:text-champagne-500 transition-colors">Sample Gallery</a>
+                <a href="#reviews" class="text-slate-300 hover:text-champagne-500 transition-colors">Google Rating</a>
+                <a href="#contact" class="text-slate-300 hover:text-champagne-500 transition-colors">Contact</a>
+            </nav>
+
+            <a href="https://wa.me/9779802455629?text=Hello%20JS%20Photo%20Studio%2C%20I%20have%20an%20inquiry." 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="px-4 py-2 rounded-full bg-champagne-500 hover:bg-champagne-600 text-obsidian font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-2">
+               <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.205 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+               WhatsApp Us
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-16 md:py-20 overflow-hidden border-b border-surfaceBorder">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7 space-y-6">
+                <!-- Trust Badge -->
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-champagne-500/10 border border-champagne-500/30 text-champagne-400 text-xs font-semibold">
+                    <span class="text-amber-400">★ 4.9</span>
+                    <span class="text-slate-400">•</span>
+                    <span>225+ Google Reviews</span>
+                    <span class="text-slate-400">•</span>
+                    <span class="text-slate-300">Dhapasi, Kathmandu</span>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
+                    Professional Photography & <span class="text-gradient">Everyday Electronics</span>
+                </h1>
+
+                <p class="text-slate-300 text-base md:text-lg max-w-xl font-light leading-relaxed">
+                    Bringing your Google reputation to life with studio-quality photography, fast printing, passport photos, and local consumer electronics in Dhapasi.
+                </p>
+
+                <!-- Actions -->
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#inquiry" class="px-6 py-3 rounded-full bg-champagne-500 hover:bg-champagne-600 text-obsidian font-bold text-sm tracking-wide transition-all shadow-lg shadow-champagne-500/20">
+                        Send Inquiry
+                    </a>
+                    <a href="tel:9802455629" class="px-6 py-3 rounded-full glass-card hover:bg-surfaceBorder text-white font-medium text-sm transition-all flex items-center gap-2">
+                        <svg class="w-4 h-4 text-champagne-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        Call 980-2455629
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:col-span-5">
+                <div class="glass-card p-4 rounded-2xl relative">
+                    <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&w=800&q=80" 
+                         alt="Studio Camera" 
+                         class="rounded-xl w-full h-80 object-cover opacity-90">
+                    <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-obsidian/90 backdrop-blur-md border border-surfaceBorder text-xs text-slate-300">
+                        <p class="font-serif text-sm font-semibold text-white">JS Photo Studio & Electronics</p>
+                        <p class="mt-0.5 text-slate-400">Located at Dhapasi Marg, Kathmandu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 border-b border-surfaceBorder bg-surface/50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-serif font-bold text-white">Our Services</h2>
+                <p class="text-slate-400 text-sm mt-2">Comprehensive studio photography and essential electronics, conveniently in one location.</p>
+            </div>
+
+            <!-- Tab Switcher -->
+            <div class="flex justify-center mb-8">
+                <div class="glass-card p-1 rounded-full inline-flex gap-1">
+                    <button onclick="switchTab('photo', event)" id="tab-photo" class="px-5 py-2 rounded-full text-xs font-bold transition-all bg-champagne-500 text-obsidian">
+                        📷 Photography & Studio
+                    </button>
+                    <button onclick="switchTab('electronics', event)" id="tab-elec" class="px-5 py-2 rounded-full text-xs font-bold transition-all text-slate-400 hover:text-white">
+                        ⚡ Electronics & Accessories
+                    </button>
+                </div>
+            </div>
+
+            <!-- Photography Tab Content -->
+            <div id="content-photo" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-xl glass-card-hover">
+                    <div class="w-10 h-10 rounded-lg bg-champagne-500/10 border border-champagne-500/30 flex items-center justify-center text-champagne-500 font-bold mb-4">🪪</div>
+                    <h3 class="font-serif text-lg font-bold text-white">Passport & Visa Photos</h3>
+                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">Official requirement-compliant photos for passports, visas, and ID documents.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl glass-card-hover">
+                    <div class="w-10 h-10 rounded-lg bg-champagne-500/10 border border-champagne-500/30 flex items-center justify-center text-champagne-500 font-bold mb-4">🖼️</div>
+                    <h3 class="font-serif text-lg font-bold text-white">Photo Printing & Framing</h3>
+                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">Digital photo printing, size enlargements, and custom framing options.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl glass-card-hover sm:col-span-2 lg:col-span-1">
+                    <div class="w-10 h-10 rounded-lg bg-champagne-500/10 border border-champagne-500/30 flex items-center justify-center text-champagne-500 font-bold mb-4">👤</div>
+                    <h3 class="font-serif text-lg font-bold text-white">Portrait Photography</h3>
+                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">In-studio personal portraits, family photos, and formal session photos.</p>
+                </div>
+            </div>
+
+            <!-- Electronics Tab Content -->
+            <div id="content-electronics" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+                <div class="glass-card p-6 rounded-xl glass-card-hover">
+                    <div class="w-10 h-10 rounded-lg bg-champagne-500/10 border border-champagne-500/30 flex items-center justify-center text-champagne-500 font-bold mb-4">💾</div>
+                    <h3 class="font-serif text-lg font-bold text-white">Memory & Storage</h3>
+                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">SD cards, microSD cards, USB drives, and memory accessories.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl glass-card-hover">
+                    <div class="w-10 h-10 rounded-lg bg-champagne-500/10 border border-champagne-500/30 flex items-center justify-center text-champagne-500 font-bold mb-4">🔌</div>
+                    <h3 class="font-serif text-lg font-bold text-white">Chargers & Cables</h3>
+                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">Phone chargers, data cables, adapters, and power accessories.</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl glass-card-hover sm:col-span-2 lg:col-span-1">
+                    <div class="w-10 h-10 rounded-lg bg-champagne-500/10 border border-champagne-500/30 flex items-center justify-center text-champagne-500 font-bold mb-4">📷</div>
+                    <h3 class="font-serif text-lg font-bold text-white">Camera Accessories</h3>
+                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">Batteries, basic lighting, mini tripods, and photo gear items.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concept Gallery Section -->
+    <section id="gallery" class="py-16 border-b border-surfaceBorder">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <h2 class="text-3xl font-serif font-bold text-white">Sample Gallery</h2>
+                <!-- Concept Watermark Notice -->
+                <div class="mt-3 inline-block px-4 py-1.5 rounded-md bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">
+                    Concept Preview — Sample Images (Replace with JS Photo Studio's actual work)
+                </div>
+            </div>
+
+            <!-- Simplified Filter Buttons -->
+            <div class="flex justify-center gap-2 mb-8">
+                <button onclick="filterGallery('all', event)" class="gal-btn px-4 py-1.5 rounded-full text-xs font-bold bg-champagne-500 text-obsidian">All</button>
+                <button onclick="filterGallery('photography', event)" class="gal-btn px-4 py-1.5 rounded-full text-xs font-bold glass-card text-slate-300 hover:text-white">Photography</button>
+                <button onclick="filterGallery('electronics', event)" class="gal-btn px-4 py-1.5 rounded-full text-xs font-bold glass-card text-slate-300 hover:text-white">Electronics</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gal-item photography glass-card rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Portrait Sample" class="w-full h-64 object-cover">
+                    <div class="p-4"><p class="text-xs font-medium text-slate-300">Studio Portrait Sample</p></div>
+                </div>
+                <div class="gal-item photography glass-card rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Passport ID Sample" class="w-full h-64 object-cover">
+                    <div class="p-4"><p class="text-xs font-medium text-slate-300">Official ID / Passport Sample</p></div>
+                </div>
+                <div class="gal-item photography glass-card rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80" alt="Framing Sample" class="w-full h-64 object-cover">
+                    <div class="p-4"><p class="text-xs font-medium text-slate-300">Wall Frame Print Sample</p></div>
+                </div>
+                <div class="gal-item electronics glass-card rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80" alt="Memory Card Sample" class="w-full h-64 object-cover">
+                    <div class="p-4"><p class="text-xs font-medium text-slate-300">Digital Memory Cards</p></div>
+                </div>
+                <div class="gal-item electronics glass-card rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="Charger Accessories" class="w-full h-64 object-cover">
+                    <div class="p-4"><p class="text-xs font-medium text-slate-300">Cables & Power Chargers</p></div>
+                </div>
+                <div class="gal-item photography glass-card rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80" alt="Camera Gear Sample" class="w-full h-64 object-cover">
+                    <div class="p-4"><p class="text-xs font-medium text-slate-300">Camera Equipment</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Quote Section (Replaces Unverified Pricing & Fake Booking) -->
+    <section id="inquiry" class="py-16 border-b border-surfaceBorder bg-surface/30">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="glass-card p-8 rounded-2xl border-champagne-500/30">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-serif font-bold text-white">Request a Quote or Info</h2>
+                    <p class="text-slate-400 text-xs mt-2">Select what you need and message JS Photo Studio directly on WhatsApp.</p>
+                </div>
+
+                <form id="quoteForm" onsubmit="sendWhatsAppQuote(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Your Name</label>
+                        <input type="text" id="custName" required placeholder="Enter your full name" 
+                               class="w-full px-4 py-2.5 rounded-lg bg-obsidian border border-surfaceBorder text-white text-sm focus:border-champagne-500 focus:outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Service or Item Needed</label>
+                        <select id="serviceSelect" required class="w-full px-4 py-2.5 rounded-lg bg-obsidian border border-surfaceBorder text-white text-sm focus:border-champagne-500 focus:outline-none">
+                            <option value="Passport / Visa Photos">Passport / Visa Photos</option>
+                            <option value="Portrait Photography">Portrait Photography</option>
+                            <option value="Photo Printing & Framing">Photo Printing & Framing</option>
+                            <option value="Electronics & Accessories">Electronics & Accessories</option>
+                            <option value="Other Inquiry">Other Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Additional Notes (Optional)</label>
+                        <textarea id="custNotes" rows="3" placeholder="Tell us about photo sizes, quantity, or specific items..." 
+                                  class="w-full px-4 py-2.5 rounded-lg bg-obsidian border border-surfaceBorder text-white text-sm focus:border-champagne-500 focus:outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 rounded-lg bg-champagne-500 hover:bg-champagne-600 text-obsidian font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.205 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        Get Quote on WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-16 border-b border-surfaceBorder">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-serif font-bold text-white mb-2">Customer Reputation</h2>
+            <p class="text-slate-400 text-xs mb-8">Verified customer satisfaction on Google Maps.</p>
+
+            <div class="glass-card p-8 rounded-2xl max-w-lg mx-auto space-y-4">
+                <div class="text-5xl font-serif font-bold text-champagne-500">4.9 ★</div>
+                <p class="text-sm font-medium text-white">Based on 225+ Google Reviews</p>
+                <p class="text-xs text-slate-400">Serving local residents and visitors in Dhapasi, Kathmandu.</p>
+
+                <div class="pt-4">
+                    <a href="https://maps.google.com/?q=JS+PHOTO+STUDIO+%26+ELECTRONICS+Dhapasi+Kathmandu" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-surfaceBorder hover:bg-slate-700 text-white font-medium text-xs transition-all">
+                        View Google Reviews →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Disclaimer Notice -->
+            <p class="text-[11px] text-slate-500 mt-6 max-w-md mx-auto leading-relaxed">
+                Google rating shown above is based on the studio's Google Maps listing. Individual customer reviews can be featured directly on the website after launch.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="py-16 border-b border-surfaceBorder bg-surface/30">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-serif font-bold text-white">Visit or Call Us</h2>
+                <p class="text-slate-400 text-sm">Conveniently located in Dhapasi Marg for all your photo and accessory needs.</p>
+
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-start gap-3">
+                        <span class="text-champagne-500 font-bold">📍</span>
+                        <span class="text-slate-300">Dhapasi Marg, Kathmandu 44600, Bagmati Province, Nepal</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-champagne-500 font-bold">📞</span>
+                        <a href="tel:9802455629" class="text-white hover:text-champagne-500 font-semibold">980-2455629</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-champagne-500 font-bold">⏰</span>
+                        <span class="text-slate-300">Open Daily</span>
+                    </div>
+                </div>
+
+                <div class="pt-2 flex flex-wrap gap-3">
+                    <a href="https://maps.google.com/?q=JS+PHOTO+STUDIO+%26+ELECTRONICS+Dhapasi+Kathmandu" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="px-5 py-2.5 rounded-full bg-champagne-500 hover:bg-champagne-600 text-obsidian font-bold text-xs transition-all">
+                        Open in Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl">
+                <h3 class="font-serif text-lg font-bold text-white mb-2">Pitch Concept Note</h3>
+                <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                    This website concept was designed specifically to show how JS Photo Studio & Electronics can convert its strong offline reputation into a high-converting digital storefront.
+                </p>
+                <div class="p-3 rounded-lg bg-obsidian border border-surfaceBorder text-[11px] text-slate-400">
+                    ✓ Custom domain ready<br>
+                    ✓ Fast mobile loading<br>
+                    ✓ Direct WhatsApp lead routing
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-obsidian text-center text-xs text-slate-500 border-t border-surfaceBorder">
+        <p>© JS Photo Studio & Electronics • Dhapasi Marg, Kathmandu</p>
+        <p class="mt-1 text-[10px] text-slate-600">Website design concept created for demonstration purposes.</p>
+    </footer>
+
+    <!-- Tab & Filter JavaScript -->
+    <script>
+        function switchTab(tabName, e) {
+            const photoContent = document.getElementById('content-photo');
+            const elecContent = document.getElementById('content-electronics');
+            const btnPhoto = document.getElementById('tab-photo');
+            const btnElec = document.getElementById('tab-elec');
+
+            if (tabName === 'photo') {
+                photoContent.classList.remove('hidden');
+                elecContent.classList.add('hidden');
+                btnPhoto.className = 'px-5 py-2 rounded-full text-xs font-bold transition-all bg-champagne-500 text-obsidian';
+                btnElec.className = 'px-5 py-2 rounded-full text-xs font-bold transition-all text-slate-400 hover:text-white';
+            } else {
+                photoContent.classList.add('hidden');
+                elecContent.classList.remove('hidden');
+                btnElec.className = 'px-5 py-2 rounded-full text-xs font-bold transition-all bg-champagne-500 text-obsidian';
+                btnPhoto.className = 'px-5 py-2 rounded-full text-xs font-bold transition-all text-slate-400 hover:text-white';
+            }
+        }
+
+        function filterGallery(category, e) {
+            const items = document.querySelectorAll('.gal-item');
+            const buttons = document.querySelectorAll('.gal-btn');
+
+            buttons.forEach(btn => {
+                btn.className = 'gal-btn px-4 py-1.5 rounded-full text-xs font-bold glass-card text-slate-300 hover:text-white';
+            });
+
+            e.currentTarget.className = 'gal-btn px-4 py-1.5 rounded-full text-xs font-bold bg-champagne-500 text-obsidian';
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function sendWhatsAppQuote(e) {
+            e.preventDefault();
+            const name = document.getElementById('custName').value;
+            const service = document.getElementById('serviceSelect').value;
+            const notes = document.getElementById('custNotes').value;
+
+            const text = `Hello JS Photo Studio!%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Service:* ${encodeURIComponent(service)}%0A*Details:* ${encodeURIComponent(notes || 'N/A')}`;
+            window.open(`https://wa.me/9779802455629?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
